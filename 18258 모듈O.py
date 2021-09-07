@@ -43,8 +43,3 @@ def launch(n) :
             d.append(int(tmp[1]))          
         
 launch(num)
-
-
-
-
-
