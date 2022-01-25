@@ -1,6 +1,9 @@
 a, b, c = map(int, input().split())
 
 def solution(a, b) :
+    # 처음 통과
+    # return pow(a, b, c)
+    
     if b == 1 :
         return a % c
     else :    
