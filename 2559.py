@@ -1,13 +1,14 @@
 def solution() :
-    n = int(input())
-    std = list(input())
+    n, k = map(int ,input().split())
+    temp = list(map(int, input().split()))
     
-    for _ in range(n-1) :
-        compare = list(input())
-        for j in range(len(std)) :
-            if std[j] != compare[j] :
-                std[j] = '?'
+    tmp = sum(temp[:k])
+    prefix = [tmp]
     
-    print(''.join(std))
-                
+    for i in range(len(temp)-k) :
+        tmp = tmp - temp[i] + temp[i+k]
+        prefix.append(tmp)
+    
+    print(max(prefix))
+    
 solution()
